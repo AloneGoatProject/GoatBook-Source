@@ -86,7 +86,11 @@
 日期`2025/9/27`
 - 太阳城加入茕羊，成为自治城市  
 - [茕茕孑立的山羊](../name/name.md/#goat)担任太阳城市长  
-- 给予*awa*[Emerald](../name/name.md/#emerald)继承权  
+- 给予*awa*[Emerald](../name/name.md/#emerald)政治权利继承权
+
+## 第十三次议会 {#20251004}
+- 未通过任何议案  
+
 
  <script src="/js/dist/autoload.js"></script>
  <script>
