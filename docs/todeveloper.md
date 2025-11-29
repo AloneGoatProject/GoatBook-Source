@@ -34,7 +34,7 @@ ame_thing。md”|
 | 议会       | #meeting |
 | mumu       | #mumu |
 | 醉鸡王       | #linbiao |
-| 卡尔·李卜克内西   | #mickymomse |
+| MickyMomse   | #mickymomse |
 | 红树原木    | #redwood  |
 | 蜃涟      | #qsj |
 
