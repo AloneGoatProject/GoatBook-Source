@@ -116,5 +116,11 @@
 			"Ids": []
 		}
 	],
+	"layout":{ 
+        "center_x": 0,
+        "center_y": -100,
+        "width": 1.8,
+        "height": 2.5
+    },
 	"HitAreas": []
 }

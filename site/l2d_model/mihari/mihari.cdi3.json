@@ -39,12 +39,12 @@
 		{
 			"Id": "ParamEyeBallX",
 			"GroupId": "",
-			"Name": "眼球 X"
+			"Name": "眼珠 X"
 		},
 		{
 			"Id": "ParamEyeBallY",
 			"GroupId": "",
-			"Name": "眼球 Y"
+			"Name": "眼珠 Y"
 		},
 		{
 			"Id": "ParamBrowLY",
@@ -89,17 +89,17 @@
 		{
 			"Id": "ParamMouthForm",
 			"GroupId": "",
-			"Name": "嘴部　变形"
+			"Name": "嘴　变形"
 		},
 		{
 			"Id": "ParamMouthOpenY",
 			"GroupId": "",
-			"Name": "嘴巴　张开和闭合"
+			"Name": "嘴　张开和闭合"
 		},
 		{
 			"Id": "ParamCheek",
 			"GroupId": "",
-			"Name": "脸颊"
+			"Name": "脸颊泛红"
 		},
 		{
 			"Id": "ParamBodyAngleX",
@@ -124,36 +124,36 @@
 		{
 			"Id": "ParamHairFront",
 			"GroupId": "",
-			"Name": "摇动　前发"
+			"Name": "摇动 前发"
 		},
 		{
 			"Id": "ParamHairSide",
 			"GroupId": "",
-			"Name": "摇动　侧发"
+			"Name": "摇动 侧发"
 		},
 		{
 			"Id": "ParamHairBack",
 			"GroupId": "",
-			"Name": "摇动　后发"
+			"Name": "摇动 后发"
 		}
 	],
 	"ParameterGroups": [],
 	"Parts": [
 		{
 			"Id": "Part",
-			"Name": "ﾃ豐ｿ"
+			"Name": "面部"
 		},
 		{
 			"Id": "Part3",
-			"Name": "ﾉ�ﾌ�"
+			"Name": "身体"
 		},
 		{
 			"Id": "Part4",
-			"Name": "ﾍｷｷ｢"
+			"Name": "头发"
 		},
 		{
 			"Id": "Part2",
-			"Name": "ﾑﾛｾｦ"
+			"Name": "眼睛"
 		}
 	]
 }

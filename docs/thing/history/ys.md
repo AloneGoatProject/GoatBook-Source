@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 [](<video id="my-video-player" playsinline controls>
     <source src="https://www.wsmdn.top/more/test.mp4" type="video/mp4">
-</video)
+</video>)
 <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 <script src="/js/dist/autoload.js"></script>
  <script>

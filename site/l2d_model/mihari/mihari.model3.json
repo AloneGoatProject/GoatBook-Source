@@ -6,14 +6,21 @@
 			"mihari.2048/texture_00.png"
 		],
 		"Physics": "mihari.physics3.json",
-		"DisplayInfo": "mihari.cdi3.json"
+		"DisplayInfo": "mihari.cdi3.json",
+		"Motions": {
+			"TapBody": [
+				{
+					"File": "anime/Scene1.motion3.json"
+				}
+			],
+			"hoverBody": [
+				{
+					"File": "anime/Scene2.motion3.json"
+				}
+			]
+		}
 	},
 	"Groups": [
-		{
-			"Target": "Parameter",
-			"Name": "LipSync",
-			"Ids": []
-		},
 		{
 			"Target": "Parameter",
 			"Name": "EyeBlink",
@@ -21,6 +28,21 @@
 				"ParamEyeLOpen",
 				"ParamEyeROpen"
 			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamEyeLSmile",
+				"ParamEyeRSmile",
+				"ParamMouthOpenY"
+			]
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitArea",
+			"Name": "Body"
 		}
 	]
 }

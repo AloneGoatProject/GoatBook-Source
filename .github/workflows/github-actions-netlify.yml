@@ -35,4 +35,75 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbs_offline
+          path: site
+          retention-days: 1
+  publish_release:
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+      
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          # 指定要下载的构件名称
+          name: gbs_offline
+          # 指定下载到此目录，该目录会被自动创建
+          path: site
+      - name: Archive File
+        run: |
+            tar -czvf GoatBook_Source.tar.gz ./site
+      - name: Get Commit Info
+        id: commit_info
+        run: |
+          # 获取最新一次提交的短哈希值（例如：a1b2c3d）
+          COMMIT_SHORT_SHA=$(git rev-parse --short HEAD)
+          # 获取最新一次提交的标题
+          COMMIT_SUBJECT=$(git log -1 --pretty=format:"%s")
+          
+          # 将这些信息设置为输出，供后续步骤使用
+          echo "short_sha=$COMMIT_SHORT_SHA" >> $GITHUB_OUTPUT
+          echo "subject=$COMMIT_SUBJECT" >> $GITHUB_OUTPUT
+      
+      - name: Generate Changelog
+        id: changelog
+        # 使用上一步获取的提交标题
+        run: |
+          echo "## 最新提交" >> $GITHUB_STEP_SUMMARY
+          echo "- ${{ steps.commit_info.outputs.subject }}" >> $GITHUB_STEP_SUMMARY
+          
+          CHANGELOG=$(cat $GITHUB_STEP_SUMMARY)
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+
+            
+      - name: Create GitHub Release & Upload Assets
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # --- 主要修改在这里 ---
+          # tag_name 仍然使用短哈希来保证唯一性
+          tag_name: ${{ steps.commit_info.outputs.short_sha }}
+          # name 改为使用提交标题，更具可读性
+          name: ${{ steps.commit_info.outputs.subject }}
+          # --- 其他部分保持不变 ---
+          generate_release_notes: true 
+          body: |
+            Release notes for commit ${{ steps.commit_info.outputs.short_sha }}
+            茕羊维基离线文档
+            ${{ steps.changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+          files: |
+              GoatBook_Source.tar.gz
+
 

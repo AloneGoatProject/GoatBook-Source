@@ -44,7 +44,8 @@ plugins:
       separator: '[\s\-\.]+'  # 更好地切分中文和符号
       lang: ['zh']
       # 明确指定中文语言
-
+extra_css:
+ - /extra.css
 
 markdown_extensions:
   - pymdownx.tabbed
@@ -53,6 +54,7 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - admonition
+
 
 
 
