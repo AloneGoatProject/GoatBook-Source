@@ -16,11 +16,11 @@
 
 ## 我 {#me}
 本维基中的*“我”*在没有特殊说明的情况下，一般指群员[mdn](#mdn)    
-已在西进运动中退出群聊  
 
 ## mdn
 !!!本群在2025年4月前禁止提起mdn
 mdn是啥比，贪官污吏，叛徒，特务，反党分子，野心家，黑线人物，不革命，黑秀才，老好人，造谣公司，传话筒，中庸之道,大恶霸，修正主义，资本主义，翻动牌  
+已在西进运动中退出群聊  
 主要作品：[mdn小破站](https://www.wsmdn.top)、[赤石工具箱NT](https://github.com/nomdn/EatRedstoneNT)、[NBP简单色图](https://github.com/nomdn/nonebot-plugin-simple-setu)、[茕羊论坛](https://bbs.goatproject.qzz.io/)
  
 ## 绿宝石 {#emerald}
