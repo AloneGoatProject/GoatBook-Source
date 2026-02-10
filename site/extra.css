@@ -1,6 +1,6 @@
 /* extra.css */
 
-/* 将整个网站内容变为灰度 */
+/* 将整个网站内容变为灰度
 html {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -8,3 +8,4 @@ html {
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+ */

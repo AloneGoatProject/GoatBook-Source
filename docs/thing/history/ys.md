@@ -1,10 +1,3 @@
-<head>
-<!-- 在head中添加 -->
-<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-
-<!-- 在body底部添加 -->
-
-</head>
 # 野史
 
 ## 茕羊民国进口奶粉检测出致癌物质
@@ -130,47 +123,20 @@
 请收看本期《今日说法》  
 *(不好意思串台了)*  
 [自卫视频](https://m.bilibili.com/video/BV1GJ411x7h7)   
+
 ## 刘峪企自卫视频流出  
 13cm大雕，非常恐怖  
 [自卫视频](https://b23.tv/Cc4UW84)    
-## 惊讶的刘峪企  
+
+## 惊讶的刘峪企 
+
 刘裕企看见自己的吊没了belike：
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 初始化视频播放器
-    const videoPlayer = new Plyr('video', {
-        controls: [
-            'play-large', 'play', 'progress', 'current-time', 
-            'duration', 'mute', 'volume', 'captions', 'settings', 
-            'pip', 'fullscreen'
-        ]
-    });
-    
-    // 初始化音频播放器
-    const audioPlayer = new Plyr('#my-audio-player');
-    
-    // 事件监听示例
-    videoPlayer.on('play', () => {
-        console.log('视频开始播放');
-    });
-    // 初始化页面上所有video和audio元素
-    const players = Plyr.setup('video, audio', {
-    controls: [
-        'play-large', 'play', 'progress', 'current-time',
-        'duration', 'mute', 'volume', 'fullscreen'
-    ]
-});
-});
-</script>
-<video id="my-video-player" playsinline controls>
-    <source src="/video/lyq.mp4" type="video/mp4">
+<!-- 视频元素 -->
+<video id="player" playsinline controls data-poster="/img/lyq.jpg">
+  <source src="/video/lyq.mp4" type="video/mp4" />
 </video>
 
-[](<video id="my-video-player" playsinline controls>
-    <source src="https://www.wsmdn.top/more/test.mp4" type="video/mp4">
-</video>)
-<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-
+<!-- Giscus 评论区（保持不变） -->
 <div id="giscus"></div>
 <script src="https://giscus.app/client.js"
         data-repo="nomdn/GoatBook-Source"
@@ -187,19 +153,22 @@ document.addEventListener('DOMContentLoaded', function() {
         crossorigin="anonymous"
         async>
 </script>
-<script src="/js/dist/autoload.js"></script>
- <script>
-// 页面加载完成后开始定期执行
-window.addEventListener('load', () => {
-  console.log("Live2D waifu script loaded.");
-  
-  // 初始执行一次
-  updateWaifuStyle();
 
-  // 每隔 1 秒检查一次 modelId 是否发生变化（例如其他脚本修改了 localStorage）
-  setInterval(() => {
-    console.log("running");
+<!-- 你的其他脚本 -->
+<script src="/js/dist/autoload.js"></script>
+
+<!-- ✅ 正确引入 Plyr CSS 和 JS -->
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+<script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+
+<!-- ✅ 单独初始化 Plyr -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log("Initializing Plyr...");
+    const player = new Plyr('#player');
+    
+    // 如果你还有 Live2D 相关逻辑，也可以放这里
     updateWaifuStyle();
-  }, 1000);
-});
-  </script>
+    setInterval(updateWaifuStyle, 1000);
+  });
+</script>
