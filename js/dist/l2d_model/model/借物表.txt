@@ -1,0 +1,13 @@
+模型(model):泡芙妙妙屋
+
+动作(motion):泡芙妙妙屋
+
+相机(camera):泡芙妙妙屋
+
+表情:泡芙妙妙屋
+
+场景(stage); 泡芙妙妙屋
+
+工具(Tools）：Oh My Live2d
+
+music:

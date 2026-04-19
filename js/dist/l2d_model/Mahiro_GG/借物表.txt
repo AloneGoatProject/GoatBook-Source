@@ -1,0 +1,13 @@
+模型(model):yuzuru233
+
+动作(motion):yuzuru233
+
+相机(camera):yuzuru233
+
+表情:yuzuru233
+
+场景(stage); yuzuru233
+
+工具(Tools）：Oh My Live2d
+
+music:
